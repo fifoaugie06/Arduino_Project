@@ -3,11 +3,14 @@ package com.example.arduino_project;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ProgressDialog;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -22,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
     ImageView imgBulb;
     String STATUS;
     DatabaseReference database;
+    ProgressDialog pd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +34,9 @@ public class MainActivity extends AppCompatActivity {
 
         btnPower = findViewById(R.id.btn_power);
         imgBulb = findViewById(R.id.img_bulb);
+
+        pd = new ProgressDialog(MainActivity.this);
+        pd.setMessage("Waiting Respons...");
 
         database = FirebaseDatabase.getInstance().getReference();
         database.child("LED_STATUS").addValueEventListener(new ValueEventListener() {
@@ -58,11 +65,13 @@ public class MainActivity extends AppCompatActivity {
                             updateStatus("OFF");
                             imgBulb.setImageResource(R.drawable.ic_highlight_red_24dp);
                             btnPower.setText("NYALAKAN");
+                            pd.show();
                         }else {
                             STATUS = "ON";
                             btnPower.setText("MATIKAN");
                             imgBulb.setImageResource(R.drawable.ic_highlight_green_24dp);
                             updateStatus("ON");
+                            pd.show();
                         }
                     }
                 });
@@ -82,7 +91,12 @@ public class MainActivity extends AppCompatActivity {
                 .addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
                     public void onSuccess(Void aVoid) {
-
+                        new Handler().postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                pd.dismiss();
+                            }
+                        }, 1500);
                     }
                 });
     }
