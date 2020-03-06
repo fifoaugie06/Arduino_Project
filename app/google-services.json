@@ -1,0 +1,85 @@
+{
+  "project_info": {
+    "project_number": "136376797182",
+    "firebase_url": "https://arduino-9cdbf.firebaseio.com",
+    "project_id": "arduino-9cdbf",
+    "storage_bucket": "arduino-9cdbf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:136376797182:android:c8087887fcf0b01e8722af",
+        "android_client_info": {
+          "package_name": "com.example.arduino"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "136376797182-k86jf7ukcmoveccp415g2iju9ltmlmg6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.arduino",
+            "certificate_hash": "5ee5852b19f9a7f3570a7444a2f7256147e10cfa"
+          }
+        },
+        {
+          "client_id": "136376797182-n8gl7esp6p8g7uu7pc945mf7i57uno33.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCa8Jk5laaXNO1Wkpj9wIproIyn-oWsd7Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "136376797182-n8gl7esp6p8g7uu7pc945mf7i57uno33.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:136376797182:android:54040e9f3575a96c8722af",
+        "android_client_info": {
+          "package_name": "com.example.arduino_project"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "136376797182-jsnu0r361c3q697e39tcm81ntdit39b6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.arduino_project",
+            "certificate_hash": "ec40b1f0dc7b44f827c46385757f0ef6885ca357"
+          }
+        },
+        {
+          "client_id": "136376797182-n8gl7esp6p8g7uu7pc945mf7i57uno33.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCa8Jk5laaXNO1Wkpj9wIproIyn-oWsd7Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "136376797182-n8gl7esp6p8g7uu7pc945mf7i57uno33.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
